@@ -1,0 +1,393 @@
+* {
+    margin: 0; /* This is for resetting margin */
+    padding: 0; /* This is for resetting padding */
+    box-sizing: border-box; /* This is for setting box-sizing */
+    font-family: 'Segoe UI', sans-serif; /* This is for setting font family */
+}
+
+:root {
+    --primary-red: #ff0000; /* This is for defining primary red color */
+    --dark-red: #990000; /* This is for defining dark red color */
+    --light-red: #ff3333; /* This is for defining light red color */
+    --bg-color: #0a0a0a; /* This is for defining background color */
+    --text-color: #ffffff; /* This is for defining text color */
+    --card-bg: #1a1a1a; /* This is for defining card background color */
+}
+
+body {
+    background: var(--bg-color); /* This is for setting body background */
+    color: var(--text-color); /* This is for setting body text color */
+    line-height: 1.6; /* This is for setting line height */
+}
+
+/* This is for Header Styles */
+header {
+    position: fixed; /* This is for fixing header position */
+    width: 100%; /* This is for setting header width */
+    z-index: 1000; /* This is for setting z-index for layering */
+    background: rgba(10, 10, 10, 0.95); /* This is for setting semi-transparent background */
+    backdrop-filter: blur(10px); /* This is for applying blur effect */
+}
+
+nav {
+    max-width: 1200px; /* This is for setting max width for nav */
+    margin: 0 auto; /* This is for centering nav */
+    padding: 1rem; /* This is for setting padding */
+    display: flex; /* This is for using flexbox */
+    justify-content: center; /* This is for centering items horizontally */
+    align-items: center; /* This is for centering items vertically */
+}
+
+.nav-links {
+    display: flex; /* This is for using flexbox for links */
+    gap: 2rem; /* This is for setting gap between links */
+}
+
+.nav-links a {
+    text-decoration: none; /* This is for removing underline from links */
+    color: var(--text-color); /* This is for setting link color */
+    transition: color 0.3s; /* This is for setting transition for color change */
+}
+
+.nav-links a:hover {
+    color: var(--primary-red); /* This is for changing color on hover */
+}
+
+/* This is for Section with Two Profiles */
+.hero {
+    min-height: 100vh; /* This is for setting minimum height */
+    display: flex; /* This is for using flexbox */
+    align-items: center; /* This is for centering items vertically */
+    justify-content: center; /* This is for centering items horizontally */
+    padding: 6rem 2rem 2rem; /* This is for setting padding */
+    gap: 4rem; /* This is for setting gap between items */
+    flex-wrap: wrap; /* This is for allowing wrapping */
+}
+
+.profile-container {
+    text-align: center; /* This is for centering text */
+    position: relative; /* This is for setting relative positioning */
+}
+
+.profile-circle {
+    width: 300px; /* This is for setting width */
+    height: 300px; /* This is for setting height */
+    border-radius: 50%; /* This is for making circle */
+    overflow: hidden; /* This is for hiding overflow */
+    position: relative; /* This is for setting relative positioning */
+    margin-bottom: 2rem; /* This is for setting bottom margin */
+    box-shadow: 0 0 50px var(--primary-red); /* This is for applying shadow */
+    animation: glowing 2s infinite; /* This is for applying glowing animation */
+}
+
+.profile-circle img {
+    width: 100%; /* This is for setting image width */
+    height: 100%; /* This is for setting image height */
+    object-fit: cover; /* This is for covering the area */
+}
+
+/* This is for glowing effect of the 2 profiles */
+@keyframes glowing {
+    0% { box-shadow: 0 0 20px var(--primary-red); } /* This is for initial state */
+    50% { box-shadow: 0 0 50px var(--primary-red); } /* This is for midpoint state */
+    100% { box-shadow: 0 0 20px var(--primary-red); } /* This is for end state */
+}
+
+.profile-name {
+    font-size: 2rem; /* This is for setting font size */
+    margin-bottom: 1rem; /* This is for setting bottom margin */
+    color: var(--primary-red); /* This is for setting text color */
+}
+
+.profile-title {
+    font-size: 1.2rem; /* This is for setting font size */
+    color: var(--light-red); /* This is for setting text color */
+}
+
+/* This is for About Section */
+.about {
+    padding: 5rem 2rem; /* This is for setting padding */
+    max-width: 1200px; /* This is for setting max width */
+    margin: 0 auto; /* This is for centering section */
+}
+
+.section-title {
+    text-align: center; /* This is for centering text */
+    font-size: 2.5rem; /* This is for setting font size */
+    margin-bottom: 3rem; /* This is for setting bottom margin */
+    color: var(--primary-red); /* This is for setting title color */
+}
+
+.about-grid {
+    display: grid; /* This is for using grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This is for responsive columns */
+    gap: 3rem; /* This is for setting gap between items */
+}
+
+.about-container {
+    display: grid; /* This is for using grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This is for responsive columns */
+    gap: 3rem; /* This is for setting gap between items */
+    max-width: 1200px; /* This is for setting max width */
+    margin: 0 auto; /* This is for centering container */
+}
+
+.about-card {
+    background: var(--card-bg); /* This is for setting background color */
+    padding: 2rem; /* This is for setting padding */
+    border-radius: 20px; /* This is for rounding corners */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2); /* This is for applying shadow */
+    text-align: left; /* This is for aligning text to left */
+}
+
+.about-image-container {
+    display: flex; /* This is for using flexbox */
+    justify-content: center; /* This is for centering image */
+    margin-bottom: 2rem; /* This is for setting bottom margin */
+}
+
+.about-card h3 {
+    color: var(--primary-red); /* This is for setting title color */
+    margin-bottom: 1rem; /* This is for setting bottom margin */
+    font-size: 1.5rem; /* This is for setting font size */
+}
+
+.about-card p {
+    text-align: justify; /* This is for justifying text */
+    line-height: 1.6; /* This is for setting line height */
+}
+
+.about-card .profile-circle {
+    width: 200px; /* This is for setting width */
+    height: 200px; /* This is for setting height */
+}
+
+/* This is for Skills Section */
+.skills {
+    padding: 5rem 2rem; /* This is for setting padding */
+    background: var(--card-bg); /* This is for setting background color */
+}
+
+.skills-container {
+    max-width: 1200px; /* This is for setting max width */
+    margin: 0 auto; /* This is for centering container */
+    display: grid; /* This is for using grid layout */
+    grid-template-columns: repeat(2, 1fr); /* This is for two columns */
+    gap: 4rem; /* This is for setting gap between items */
+}
+
+.skill-set {
+    padding: 2rem; /* This is for setting padding */
+}
+
+.skill-bar {
+    margin-bottom: 1.5rem; /* This is for setting bottom margin */
+}
+
+.skill-name {
+    margin-bottom: 0.5rem; /* This is for setting bottom margin */
+}
+
+.progress-bar {
+    height: 10px; /* This is for setting height */
+    background: #333; /* This is for setting background color */
+    border-radius: 5px; /* This is for rounding corners */
+    overflow: hidden; /* This is for hiding overflow */
+}
+
+.progress {
+    height: 100%; /* This is for setting height */
+    background: var(--primary-red); /* This is for setting background color */
+    width: 0; /* This is for initial width */
+    animation: fillProgress 1.5s ease-out forwards; /* This is for applying animation */
+}
+
+@keyframes fillProgress {
+    from { width: 0; } /* This is for starting width at 0 */
+    to { width: var(--width); } /* This is for ending at specified width */
+}
+
+/* This is for Projects Section */
+.projects {
+    padding: 5rem 2rem; /* This is for setting padding */
+    max-width: 1200px; /* This is for setting max width */
+    margin: 0 auto; /* This is for centering section */
+}
+
+.projects-grid {
+    display: grid; /* This is for using grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* This is for responsive columns */
+    gap: 2rem; /* This is for setting gap between items */
+}
+
+.project-card {
+    background: var(--card-bg); /* This is for setting background color */
+    border-radius: 15px; /* This is for rounding corners */
+    overflow: hidden; /* This is for hiding overflow */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2); /* This is for applying shadow */
+    transition: transform 0.3s; /* This is for setting transition for hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* This is for moving up on hover */
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.4); /* This is for increasing shadow on hover */
+}
+
+.project-img {
+    width: 100%; /* This is for setting image width */
+    height: 200px; /* This is for setting image height */
+    object-fit: cover; /* This is for covering the area */
+}
+
+.project-content {
+    padding: 1.5rem; /* This is for setting padding */
+}
+
+/* This is for Contact Section */
+.contact {
+    padding: 5rem 2rem; /* This is for setting padding */
+    background: var(--card-bg); /* This is for setting background color */
+}
+
+.contact-container {
+    max-width: 1200px; /* This is for setting max width */
+    margin: 0 auto; /* This is for centering container */
+    display: grid; /* This is for using grid layout */
+    grid-template-columns: repeat(2, 1fr); /* This is for two columns */
+    gap: 4rem; /* This is for setting gap between items */
+}
+
+.contact-form {
+    background: rgba(255, 0, 0, 0.1); /* This is for setting semi-transparent background */
+    padding: 2rem; /* This is for setting padding */
+    border-radius: 15px; /* This is for rounding corners */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2); /* This is for applying shadow */
+}
+
+.form-group {
+    margin-bottom: 1.5rem; /* This is for setting bottom margin */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* This is for setting width */
+    padding: 0.8rem; /* This is for setting padding */
+    background: var(--bg-color); /* This is for setting background color */
+    border: 1px solid var(--primary-red); /* This is for setting border */
+    border-radius: 5px; /* This is for rounding corners */
+    color: var(--text-color); /* This is for setting text color */
+}
+
+.submit-btn {
+    background: var(--primary-red); /* This is for setting background color */
+    color: white; /* This is for setting text color */
+    padding: 1rem 2rem; /* This is for setting padding */
+    border: none; /* This is for removing border */
+    border-radius: 5px; /* This is for rounding corners */
+    cursor: pointer; /* This is for changing cursor to pointer */
+    transition: background 0.3s; /* This is for setting transition for background */
+}
+
+.submit-btn:hover {
+    background: var(--dark-red); /* This is for changing background on hover */
+}
+
+/* This is for Footer Section */
+footer {
+    background: var(--card-bg); /* This is for setting background color */
+    padding: 3rem 2rem; /* This is for setting padding */
+    margin-top: 4rem; /* This is for setting top margin */
+}
+
+.footer-container {
+    display: flex; /* This is for using flexbox */
+    justify-content: center; /* This is for centering items */
+    gap: 4rem; /* This is for setting gap between items */
+    margin-bottom: 2rem; /* This is for setting bottom margin */
+    flex-wrap: wrap; /* This is for allowing wrapping */
+    max-width: 1200px; /* This is for setting max width */
+    margin: 0 auto; /* This is for centering container */
+}
+
+.social-section {
+    text-align: center; /* This is for centering text */
+    padding: 2rem; /* This is for setting padding */
+    background: rgba(255, 0, 0, 0.05); /* This is for setting semi-transparent background */
+    border-radius: 15px; /* This is for rounding corners */
+    min-width: 300px; /* This is for setting minimum width */
+}
+
+.social-title {
+    color: var(--primary-red); /* This is for setting title color */
+    font-size: 1.4rem; /* This is for setting font size */
+    margin-bottom: 1.5rem; /* This is for setting bottom margin */
+    text-transform: uppercase; /* This is for transforming text to uppercase */
+    letter-spacing: 2px; /* This is for setting letter spacing */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.3); /* This is for applying text shadow */
+}
+
+.social-links {
+    display: flex; /* This is for using flexbox */
+    gap: 2rem; /* This is for setting gap between links */
+    justify-content: center; /* This is for centering links */
+}
+
+.social-link {
+    color: var(--primary-red); /* This is for setting link color */
+    font-size: 1.8rem; /* This is for setting font size */
+    transition: all 0.3s ease; /* This is for setting transition for hover effect */
+    position: relative; /* This is for setting relative positioning */
+}
+
+.social-link:hover {
+    color: var(--light-red); /* This is for changing color on hover */
+    transform: translateY(-5px); /* This is for moving up on hover */
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6); /* This is for applying text shadow on hover */
+}
+
+.social-link::after {
+    content: ''; /* This is for empty content for pseudo-element */
+    position: absolute; /* This is for absolute positioning */
+    width: 100%; /* This is for setting width */
+    height: 2px; /* This is for setting height */
+    background: var(--primary-red); /* This is for setting background color */
+    bottom: -5px; /* This is for positioning at bottom */
+    left: 0; /* This is for aligning to left */
+    transform: scaleX(0); /* This is for setting initial scale */
+    transition: transform 0.3s ease; /* This is for setting transition for scale */
+}
+
+.social-link:hover::after {
+    transform: scaleX(1); /* This is for scaling on hover */
+}
+
+.copyright {
+    text-align: center; /* This is for centering text */
+    color: var(--text-color); /* This is for setting text color */
+    opacity: 0.8; /* This is for setting opacity */
+    font-size: 0.9rem; /* This is for setting font size */
+    margin-top: 3rem; /* This is for setting top margin */
+    border-top: 1px solid rgba(255, 0, 0, 0.2); /* This is for adding top border */
+    padding-top: 1.5rem; /* This is for setting top padding */
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        gap: 2rem; /* This is for setting gap for small screens */
+    }
+    
+    .social-section {
+        width: 100%; /* This is for setting width for small screens */
+        min-width: auto; /* This is for removing minimum width */
+    }
+    
+    .social-link {
+        font-size: 1.5rem; /* This is for reducing font size for small screens */
+    }
+}
+
+/* This is for profile circle adjustments */
+.profile-circle {
+    width: 250px; /* This is for setting width */
+    height: 250px; /* This is for setting height */
+}
